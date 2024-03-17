@@ -36,3 +36,4 @@ SpaceBeforeCtorInitializerColon: true
 SpaceBeforeInheritanceColon: true
 SpaceBeforeParens: ControlStatements
 SpaceBeforeRangeBasedForLoopColon: true
+AlwaysBreakTemplateDeclarations: Yes # Added to ensure template declarations break before the function/class definition

@@ -140,9 +140,7 @@ max(c, d) = chaine2
 
 ## Chapter IV
 
-Exercise 01: Iter
-Exercise : 01
-Iter
+Exercise 01: **Iter**
 Turn-in directory : ex01/
 Files to turn in : Makefile, main.cpp, iter.{h, hpp}
 Forbidden functions : None
@@ -152,17 +150,13 @@ Implement a function template iter that takes 3 parameters and returns nothing.
 • The second one is the length of the array.
 • The third one is a function that will be call on every element of the array.
 
-Turn in a main.cpp file that contains your tests. Provide enough code to generate a
-test executable.
-Your iter function template must work with any type of array. The third parameter
-can be an instantiated function template.
+Turn in a main.cpp file that contains your tests. Provide enough code to generate a test executable.
+Your iter function template must work with any type of array. The third parameter can be an instantiated function template.
 
-7
+## Chapter V
 
-Chapter V
-Exercise 02: Array
-Exercise : 02
-Array
+Exercise 02: **Array**
+
 Turn-in directory : ex02/
 Files to turn in : Makefile, main.cpp, Array.{h, hpp}
 and optional file: Array.tpp
@@ -183,8 +177,6 @@ std::exception is thrown.
 • A member function size() that returns the number of elements in the array. This
 member function takes no parameter and musn’t modify the current instance.
 As usual, ensure everything works as expected and turn in a main.cpp file that contains your tests.
-
-8
 
 Chapter VI
 Submission and peer-evaluation
