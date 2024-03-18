@@ -21,7 +21,8 @@
     "*.cpp": "cpp",
     "*.h": "cpp",
     "*.md": "markdown",
-    "*.sh": "shellscript"
+    "*.sh": "shellscript",
+    "*.tpp": "cpp"
   },
   "C_Cpp.clang_format_style": "file",
   "C_Cpp.clang_format_fallbackStyle": "Google"
