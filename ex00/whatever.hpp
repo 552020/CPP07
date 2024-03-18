@@ -5,23 +5,27 @@
 #include <string>
 
 template <typename T>
-void swap(T &x, T &y)
+void swap(T &a, T &b)
 {
-	T temp = x;
-	x = y;
-	y = temp;
+	T temp = a;
+	a = b;
+	b = temp;
+}
+
+// using class instead of typename
+// using const reference to avoid copying in the parameters
+// always use const when possible
+// re
+template <class T>
+const T &min(const T &a, const T &b)
+{
+	return (a < b) ? a : b;
 }
 
 template <typename T>
-T min(T x, T y)
+T max(T a, T b)
 {
-	return (x < y) ? x : y;
-}
-
-template <typename T>
-T max(T x, T y)
-{
-	return (x > y) ? x : y;
+	return (a > b) ? a : b;
 }
 
 #endif
