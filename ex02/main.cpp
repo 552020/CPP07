@@ -210,9 +210,50 @@ void testSimpleTypes()
 	}
 }
 
+void testConstArray()
+{
+	Array<int> mutableArray(SIZE);
+	for (unsigned int i = 0; i < mutableArray.size(); ++i)
+		mutableArray[i] = i;
+	const Array<int> constArray = mutableArray;
+
+	std::cout << "***Test const Array***\n" << std::endl;
+	std::cout << "mutableArray size: " << mutableArray.size() << std::endl;
+	std::cout << "constArray size: " << constArray.size() << std::endl;
+	std::cout << "mutableArray elements: ";
+	printArray(mutableArray);
+	std::cout << "constArray elements: ";
+	printArray(constArray);
+
+	for (unsigned int i = 0; i < mutableArray.size(); ++i)
+		mutableArray[i] = i * 2;
+	std::cout << "mutableArray after modification: ";
+	printArray(mutableArray);
+	std::cout << "constArray after modification of mutableArray: ";
+	printArray(constArray);
+
+	for (unsigned int i = 0; i < constArray.size(); ++i)
+	{
+		// rror: cannot assign to return value because function 'operator[]' returns a const value
+		// constArray[i] = i * 3;
+		std::cout << constArray[i] << " ";
+	}
+	Array<const int> constIntArray(SIZE);
+	std::cout << "constIntArray size: " << constIntArray.size() << std::endl;
+	std::cout << "constIntArray elements: ";
+	printArray(constIntArray);
+	for (unsigned int i = 0; i < constIntArray.size(); ++i)
+	{
+		// error: cannot assign to return value because function 'operator[]' returns a const value
+		// constIntArray[i] = i * 4;
+		std::cout << constIntArray[i] << " ";
+	}
+}
+
 int main()
 {
 	// testSimpleTypes();
-	testComplexType();
+	// testComplexType();
+	testConstArray();
 	return 0;
 }
