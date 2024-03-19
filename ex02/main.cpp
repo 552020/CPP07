@@ -25,11 +25,11 @@ std::ostream &operator<<(std::ostream &os, const ComplexType &ct)
 	return os << "{" << ct.text << ", " << ct.number << "}";
 }
 
-
-std::string toString(long value) {
-    std::ostringstream oss;
-    oss << value;
-    return oss.str();
+std::string toString(long value)
+{
+	std::ostringstream oss;
+	oss << value;
+	return oss.str();
 }
 
 template <typename T>
@@ -260,8 +260,8 @@ void testConstArray()
 
 int main()
 {
-	// testSimpleTypes();
+	testSimpleTypes();
 	// testComplexType();
-	testConstArray();
+	// testConstArray();
 	return 0;
 }
