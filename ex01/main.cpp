@@ -65,69 +65,6 @@ void extra()
 	printArray(intArr, lengthIntArr);
 }
 
-class Awesome
-{
-  public:
-	Awesome(void) : _n(42)
-	{
-		return;
-	}
-	int get(void) const
-	{
-		return this->_n;
-	}
-
-  private:
-	int _n;
-};
-
-std::ostream &operator<<(std::ostream &o, Awesome const &rhs)
-{
-	o << rhs.get();
-	return o;
-}
-
-template <typename T>
-void print(T &x)
-{
-	std::cout << x << std::endl;
-	return;
-}
-
-int main()
-{
-	int tab[] = {0, 1, 2, 3, 4};
-	Awesome tab2[5];
-
-	iter(tab, 5, print<const int>);
-	iter(tab2, 5, print<Awesome>);
-
-	return 0;
-}
-
-/*
-template <typename T>
-void increment(T &value)
-{
-	++value;
-}
-
-template <typename T>
-void setTo42(T &value)
-{
-	value = static_cast<T>(42);
-}
-
-template <typename T>
-void printArray(T *array, int length)
-{
-	for (int i = 0; i < length; ++i)
-	{
-		std::cout << array[i] << " ";
-	}
-	std::cout << std::endl;
-}
-
 int main()
 {
 	int intArr[] = {1, 2, 3, 4, 5};
@@ -135,7 +72,7 @@ int main()
 
 	std::cout << "Original array: ";
 	printArray(intArr, lengthIntArr);
-	iter(intArr, lengthIntArr, increment);
+	iter(intArr, lengthIntArr, increment<int>);
 	std::cout << "Modified array: ";
 	printArray(intArr, lengthIntArr);
 	std::cout << std::endl;
@@ -146,18 +83,16 @@ int main()
 
 	std::cout << "Original char array: ";
 	printArray(CharArr, lengthC);
-	iter(CharArr, lengthC, increment);
+	iter(CharArr, lengthC, increment<char>);
 	std::cout << "Modified char array: ";
 	printArray(CharArr, lengthC);
 	std::cout << std::endl;
 
 	std::cout << "Original array: ";
 	printArray(intArr, lengthIntArr);
-	iter(intArr, lengthIntArr, setTo42);
+	iter(intArr, lengthIntArr, setTo42<int>);
 	std::cout << "Modified array: ";
 	printArray(intArr, lengthIntArr);
 
 	return 0;
 }
-
-*/

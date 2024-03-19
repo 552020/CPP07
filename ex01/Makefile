@@ -7,7 +7,7 @@ DEPFLAGS = -MMD -MP
 TARGET = templates
 
 # Source and Object Files
-SRCS = eval.cpp
+SRCS = main.cpp
 
 # Create an obj directory if it doesn't exist
 OBJDIR = obj

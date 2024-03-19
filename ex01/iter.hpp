@@ -3,26 +3,6 @@
 
 #include <iostream>
 
-// Accepting a function taking a non-const reference to T
-/*
-template <typename T>
-void iter(T *array, size_t length, void (*func)(T &))
-{
-	for (size_t i = 0; i < length; i++)
-		func(array[i]);
-}
-*/
-
-// Accepting a function taking a const reference to T
-/*
-template <typename T>
-void iter(T *array, size_t length, void (*func)(const T &))
-{
-	for (size_t i = 0; i < length; i++)
-		func(array[i]);
-}
-*/
-
 template <typename T, typename Func>
 void iter(T *array, size_t size, Func func)
 {
@@ -30,11 +10,22 @@ void iter(T *array, size_t size, Func func)
 		func(array[i]);
 }
 
-/* For testing  purpsoses */
+/* Alternative solution
+// Accepting a function taking a non-const reference to T
 template <typename T>
-void printElement(const T &x)
+void iter(T *array, size_t length, void (*func)(T &))
 {
-	std::cout << x << std::endl;
+	for (size_t i = 0; i < length; i++)
+		func(array[i]);
 }
+
+// Accepting a function taking a const reference to T
+template <typename T>
+void iter(T *array, size_t length, void (*func)(const T &))
+{
+	for (size_t i = 0; i < length; i++)
+		func(array[i]);
+}
+*/
 
 #endif
