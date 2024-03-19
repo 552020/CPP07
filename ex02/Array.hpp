@@ -2,6 +2,7 @@
 #define ARRAY_HPP
 
 #include <string>
+#include <cstdlib>
 #include <exception>
 #include <stdexcept>
 

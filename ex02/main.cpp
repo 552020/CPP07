@@ -1,5 +1,6 @@
 #include "Array.hpp"
 #include <iostream>
+#include <sstream>
 
 #define SIZE 10
 
@@ -22,6 +23,13 @@ void printComplexType(const ComplexType &ct)
 std::ostream &operator<<(std::ostream &os, const ComplexType &ct)
 {
 	return os << "{" << ct.text << ", " << ct.number << "}";
+}
+
+
+std::string toString(long value) {
+    std::ostringstream oss;
+    oss << value;
+    return oss.str();
 }
 
 template <typename T>
@@ -72,7 +80,7 @@ void testComplexType()
 	printArray(complexArrayCopy);
 	for (unsigned int i = 0; i < complexArrayCopy.size(); ++i)
 	{
-		std::string text = "new_" + std::to_string(i);
+		std::string text = "new_" + toString(i);
 		complexArrayCopy[i] = ComplexType(text, i);
 	}
 	std::cout << "complexArrayCopy after modification: ";
@@ -86,7 +94,7 @@ void testComplexType()
 	std::cout << "anotherComplexArray size: " << anotherComplexArray.size() << std::endl;
 	for (unsigned int i = 0; i < anotherComplexArray.size(); ++i)
 	{
-		std::string text = "another_" + std::to_string(i);
+		std::string text = "another_" + toString(i);
 		anotherComplexArray[i] = ComplexType(text, i);
 	}
 	std::cout << "anotherComplexArray elements: ";
@@ -96,7 +104,7 @@ void testComplexType()
 	printArray(complexArrayCopy);
 	for (unsigned int i = 0; i < complexArrayCopy.size(); ++i)
 	{
-		std::string text = "new_" + std::to_string(i);
+		std::string text = "new_" + toString(i);
 		complexArrayCopy[i] = ComplexType(text, i);
 	}
 	std::cout << "complexArrayCopy after modification: ";
