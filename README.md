@@ -1,4 +1,5 @@
-# CPP_Module_07
+# CPP07
+**C++ Module 05 for the core curriculum @42Berlin.**
 
 ## Exercise 00: Start with a few functions
 
@@ -29,12 +30,4 @@ public:
 
 ```
 
-## Intra: Videos
-
-### Introduction
-
-Template are awesome!
-
-###
-
-- The syntax of templates
+## ...
